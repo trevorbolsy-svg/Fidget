@@ -1334,25 +1334,9 @@ particles:newParticle("end_rod", constraint.contactPoint1) particles:newParticle
       end
     end
   end
-  tic = tic + 1
-  inst[avg] = avatar:getCurrentInstructions()
-  if avg > 50 then
-    avg = 1
-  else
-    avg = avg + 1
-  end
-  local sum = 0
-  for i, num in pairs(inst) do
-    sum = sum + num
-  end
-  if tic == 150 then
-    log(sum / #inst, tic)
-  end
 end
 
-tic = 1
-inst = {}
-avg = 1
+
 
 
 
