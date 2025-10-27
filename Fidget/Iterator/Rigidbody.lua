@@ -3,14 +3,12 @@
 --(seriously congrats on reading this far)
 
 
---who could possibly be insane enough to use metatable optimizations?
---I wonder
---Who could possibly be behind this?
---Who would think that it substracts 2 instructions and increases the performance by 1%?
---Who could possibly insane enough to use them in an actual library, right?
---HMMMMMMM
---HMMMMMMM
---HMMMMMMM
+
+
+
+
+
+
 local cache = require("Fidget.Iterator.Cache")
 local quaternions = require("Fidget.quaternions")
 local Fidget = require("Fidget.FidgetSetup")
@@ -344,7 +342,7 @@ local function getWorldColliders(rigidbody)
       for z = min.z, max.z do
         local block = (worldGetBlockState(x, y, z))
         local colliders = block:getCollisionShape()
-        if hasCollision(block) and colliders[1][1] == zeroVec and colliders[1][2] == oneVec then
+        if hasCollision(block) and colliders[1] and colliders[1][1] == zeroVec and colliders[1][2] == oneVec then
           worldMeshxy[z] = true
         else
           for i, collider in lnext, colliders do
