@@ -27,6 +27,30 @@ collisionNormals = false, --show the normals at collisions(the the local space o
 waterVolumes = false, --shows the volumes used for buoyancy
 joints = true, --shows the joints
 }
+
+function physicsSim.changeQuality(setting)
+    if setting == "high" then
+        physicsSim.physicsIterations = 3
+        physicsSim.velocityIterations = 4
+        physicsSim.dt = (1/20)/physicsSim.physicsIterations
+    end
+    if setting == "medium" then
+        physicsSim.physicsIterations = 2
+        physicsSim.velocityIterations = 4
+        physicsSim.dt = (1/20)/physicsSim.physicsIterations
+    end
+    if setting == "low" then
+        physicsSim.physicsIterations = 1
+        physicsSim.velocityIterations = 3
+        physicsSim.dt = (1/20)/physicsSim.physicsIterations
+    end
+    if setting == "lowest" then
+        physicsSim.physicsIterations = 1
+        physicsSim.velocityIterations = 1
+        physicsSim.dt = (1/20)/physicsSim.physicsIterations
+    end
+end
+  
 return physicsSim
 
 
@@ -389,6 +413,7 @@ return physicsSim
 
 --To you, the she, the metal box, the judge. I'm sorry you had to read this and that you had to see this. I know trauma dumping is bad. If you
 -- dont see this. It will be for the better.
+
 
 
 
