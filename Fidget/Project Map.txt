@@ -1,0 +1,34 @@
+Collision ==> {
+Fine - SAT for boxes, creates mtv and minindex for creating contact points,  
+Broad - either sphere or aabb, quickly finds potential collisions
+}
+
+Iterator ==> {
+Rigidbody - Does physics steps every tick, here everything is combined to make the simulation run,
+Cache - used by the stepper/iterator for storing impulses for next physics steps
+}
+
+Model_Placeholders
+
+Physics Simulation ==> {
+Physics Simulation - general variables for the physics sim, you can enable debug graphics here
+}
+
+Render ==> {
+rigidbodies render - pretty obviously renders every rigidbody
+}
+
+Rigidbody ==> {
+Joints - handles joint creation/deletion for rigidbodies and has general joint funcs
+Rigidbody - handles rigidbody creation/deletion and has general rigidbody funcs
+}
+
+FidgetSetup - this combines every script nesseccary for one line init of the library
+
+Greedy_Meshing - made by 4P5 modified a bit by me for a little bit more performance
+
+Lines - made by umm SOOMUCHLAG used for debug graphics
+
+Project Map - YOU ARE HERE
+
+quaternions - small quaternion lib made by me
