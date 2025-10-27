@@ -2,7 +2,7 @@ local rigidbodyMT = {}
 local rigidbodies = {}
 rigidbodies.allRigidbodies = {}
 rigidbodyMT.__index = {}
-
+models.Fidget.Model_Placeholders.placeholders.cube:setVisible(false)
 local mtIndex = rigidbodyMT.__index
 
 function mtIndex.remove(self)
@@ -199,7 +199,7 @@ local unpack3 = vec3().unpack
 
 local rigidbodyCopyStorage = models:newPart("copyStorage", "WORLD")
 local function createCopy(modelpart)
-  local copy = modelpart:copy("name"):setParentType("WORLD")
+  local copy = modelpart:copy("name"):setParentType("WORLD"):setVisible(true)
   rigidbodyCopyStorage:addChild(copy)
   return copy
 end
