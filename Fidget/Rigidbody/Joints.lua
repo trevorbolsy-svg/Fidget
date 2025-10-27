@@ -29,7 +29,24 @@ friction = 0.3
 local vec3 = vectors.vec3
 local vec4 = vectors.vec4
 local unpack3 = vec3().unpack
-
+function mtIndex.setPos1(self,pos)
+  self.pos1 = pos
+end
+function mtIndex.setPos2(self,pos)
+  self.pos2 = pos
+end
+function mtIndex.getPos1(self)
+  return self.pos1
+end
+function mtIndex.getPos2(self)
+  return self.pos2
+end
+function mtIndex.setDistance(self,pos)
+  self.distance = pos
+end
+function mtIndex.getDistance(self)
+  return self.distance
+end
 
 function joints.createJoint(params)
 
